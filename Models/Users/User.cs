@@ -1,17 +1,20 @@
-﻿//======================================
+//======================================
 //Nodirbek Nasrullayev Inventory Project
 //======================================
 
-namespace Inventory_final_task_.Models.User
+using System;
+using Inventory_final_task_.Models.Users;
+
+namespace Inventory_final_task_.Models.Users
 {
     public class User
     {
-        public Guid Guid { get; set; }
+        public Guid Id { get; set; }
         public string UserName { get; set; }
         public string Email { get; set; }
         public string PasswordHash { get; set; }
         public UserRole Role { get; set; } = UserRole.User;
-        public string Language { get; set; } = "en";
+        public string Language { get; set; } = "eng";
         public string Theme { get; set; } = "dark";
         public bool IsBlocked { get; set; }
         public DateTimeOffset CreatedDate { get; set; }

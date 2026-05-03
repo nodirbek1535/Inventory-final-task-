@@ -3,7 +3,7 @@
 //======================================
 
 
-namespace Inventory_final_task_.Models.User
+namespace Inventory_final_task_.Models.Users
 {
     public enum UserRole
     {
