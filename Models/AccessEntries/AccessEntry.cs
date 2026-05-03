@@ -3,6 +3,9 @@
 //======================================
 
 
+using Inventory_final_task_.Models.Inventories;
+using Inventory_final_task_.Models.Users;
+
 namespace Inventory_final_task_.Models.AccessEntries
 {
     public class AccessEntry
