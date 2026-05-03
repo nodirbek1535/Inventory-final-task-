@@ -9,7 +9,7 @@ namespace Inventory_final_task_.Models.IdElements
 {
     public class IdElement
     {
-        public Guid Guid { get; set; }
+        public Guid Id { get; set; }
         public Guid InventoryId { get; set; }
         public Inventory Inventory { get; set; }
         public string ElementType { get; set; }
