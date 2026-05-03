@@ -3,7 +3,7 @@
 //======================================
 
 using System;
-using Inventory_final_task_.Models.User;
+using Inventory_final_task_.Models.Users;
 
 namespace Inventory_final_task_.Models.Users
 {
