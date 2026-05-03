@@ -10,7 +10,7 @@ namespace Inventory_final_task_.Models.InventoryTags
 {
     public class InventoryTag
     {
-        public Guid Guid { get; set; }
+        public Guid Id { get; set; }
 
         public Guid InventoryId { get; set; }
         public Inventory Inventory { get; set; }

@@ -9,7 +9,7 @@ namespace Inventory_final_task_.Models.FieldConfigurations
 {
     public class FieldConfiguration
     {
-        public Guid Guid { get; set; }
+        public Guid Id { get; set; }
         public Guid InventoryId { get; set; }
         public Inventory Inventory { get; set; }
         public string FieldType { get; set; }
