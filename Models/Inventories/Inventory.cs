@@ -1,6 +1,10 @@
-﻿//======================================
+//======================================
 //Nodirbek Nasrullayev Inventory Project
 //======================================
+
+using System;
+using System.Collections.Generic;
+using Inventory_final_task_.Models.Users;
 
 namespace Inventory_final_task_.Models.Inventories
 {
@@ -17,6 +21,8 @@ namespace Inventory_final_task_.Models.Inventories
         public int Version { get; set; }
         public DateTimeOffset CreatedAt { get; set; }
         public DateTimeOffset UpdatedAt { get; set; }
-        //public ICollection<Item> Items { get; set; }
-        //public ICollection<FieldConfiguration> FieldConfigurations { get; set; }
+        
+        // public ICollection<Item> Items { get; set; }
+        // public ICollection<FieldConfiguration> FieldConfigurations { get; set; }
     }
+}
