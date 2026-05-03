@@ -1,4 +1,8 @@
 <Solution>
-  <Project Path="../InvenTrack.Infrastructure.Build/InvenTrack.Infrastructure.Build.csproj" />
-  <Project Path="InvenTrack.Api.csproj" />
+  <Project Path="../InvenTrack.Infrastructure.Build/InvenTrack.Infrastructure.Build.csproj">
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
+  <Project Path="InvenTrack.Api.csproj">
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
 </Solution>
