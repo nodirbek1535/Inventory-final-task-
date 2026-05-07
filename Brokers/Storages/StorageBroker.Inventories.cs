@@ -14,9 +14,8 @@ namespace Inventory_final_task_.Brokers.Storages
 
         public async ValueTask<Inventory> InsertInventoryAsync(Inventory inventory)
         {
-            using var broker = new StorageBroker(this.configuration);
-            broker.Inventories.Add(inventory);
-            await broker.SaveChangesAsync();
+            this.Inventories.Add(inventory);
+            await this.SaveChangesAsync();
 
             return inventory;
         }
@@ -24,28 +23,21 @@ namespace Inventory_final_task_.Brokers.Storages
         public IQueryable<Inventory> SelectAllInventories() =>
             this.SelectAll<Inventory>();
 
-        public async ValueTask<Inventory> SelectInventoryByIdAsync(Guid inventoryId)
-        {
-            using var broker = new StorageBroker(this.configuration);
-
-            return await broker.Inventories
-                .FirstOrDefaultAsync(inv => inv.Id == inventoryId);
-        }
+        public async ValueTask<Inventory> SelectInventoryByIdAsync(Guid inventoryId) =>
+            await this.Inventories.FindAsync(inventoryId);
 
         public async ValueTask<Inventory> UpdateInventoryAsync(Inventory inventory)
         {
-            using var broker = new StorageBroker(this.configuration);
-            broker.Inventories.Update(inventory);
-            await broker.SaveChangesAsync();
+            this.Inventories.Update(inventory);
+            await this.SaveChangesAsync();
 
             return inventory;
         }
 
         public async ValueTask<Inventory> DeleteInventoryAsync(Inventory inventory)
         {
-            using var broker = new StorageBroker(this.configuration);
-            broker.Inventories.Remove(inventory);
-            await broker.SaveChangesAsync();
+            this.Inventories.Remove(inventory);
+            await this.SaveChangesAsync();
 
             return inventory;
         }
