@@ -3,6 +3,7 @@
 //======================================
 
 
+using EntityFramework.Exceptions.PostgreSQL;
 using Microsoft.EntityFrameworkCore;
 
 namespace Inventory_final_task_.Brokers.Storages
@@ -19,11 +20,15 @@ namespace Inventory_final_task_.Brokers.Storages
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connectionString = 
+            string connectionString =
                 this.configuration.GetConnectionString("DefaultConnection");
 
             optionsBuilder.UseNpgsql(connectionString);
+
+            optionsBuilder.UseExceptionProcessor();
         }
+
+        protected IQueryable<T> SelectAll<T>() where T : class => this.Set<T>();
 
         public override void Dispose() { }
     }
