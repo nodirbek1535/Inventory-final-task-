@@ -1,4 +1,6 @@
 using Inventory_final_task_.Brokers.Storages;
+using Inventory_final_task_.Services.Foundations.FieldConfigurations;
+using Inventory_final_task_.Services.Foundations.Inventories;
 using Inventory_final_task_.Services.Foundations.Users;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +17,8 @@ builder.Services.AddScoped<IStorageBroker, StorageBroker>();
 
 // Services
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IInventoryService, InventoryService>();
+builder.Services.AddScoped<IFieldConfigurationService, FieldConfigurationService>();
 
 // Swagger
 builder.Services.AddEndpointsApiExplorer();
