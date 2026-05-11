@@ -1,4 +1,4 @@
-﻿//======================================
+//======================================
 //Nodirbek Nasrullayev Inventory Project
 //======================================
 
@@ -13,9 +13,9 @@ namespace Inventory_final_task_.Models.InventoryTags
         public Guid Id { get; set; }
 
         public Guid InventoryId { get; set; }
-        public Inventory Inventory { get; set; }
+        public Inventory? Inventory { get; set; }
 
         public Guid TagId { get; set; }
-        public Tag Tag { get; set; }
+        public Tag? Tag { get; set; }
     }
 }

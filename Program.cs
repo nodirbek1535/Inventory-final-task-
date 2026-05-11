@@ -1,3 +1,5 @@
+using Inventory_final_task_.Brokers.DateTimes;
+using Inventory_final_task_.Brokers.Loggings;
 using Inventory_final_task_.Brokers.Storages;
 using Inventory_final_task_.Services.Foundations.FieldConfigurations;
 using Inventory_final_task_.Services.Foundations.AccessEntries;
@@ -21,6 +23,8 @@ builder.Services.AddDbContext<StorageBroker>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IStorageBroker, StorageBroker>();
+builder.Services.AddTransient<IDateTimeBroker, DateTimeBroker>();
+builder.Services.AddTransient<ILoggingBroker, LoggingBroker>();
 
 // Services
 builder.Services.AddScoped<IUserService, UserService>();

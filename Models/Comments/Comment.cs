@@ -1,4 +1,4 @@
-﻿//======================================
+//======================================
 //Nodirbek Nasrullayev Inventory Project
 //======================================
 
@@ -13,7 +13,7 @@ namespace Inventory_final_task_.Models.Comments
         public string Content { get; set; }
         public Guid TargetId { get; set; }
         public Guid CreatedByUserId { get; set; }
-        public User CreatedByUser { get; set; }
+        public User? CreatedByUser { get; set; }
         public DateTimeOffset CreatedAt { get; set; }
     }
 }

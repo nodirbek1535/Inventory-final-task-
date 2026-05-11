@@ -1,4 +1,4 @@
-﻿//======================================
+//======================================
 //Nodirbek Nasrullayev Inventory Project
 //======================================
 
@@ -12,7 +12,7 @@ namespace Inventory_final_task_.Models.Likes
         public Guid Id { get; set; }
         public Guid TargetId { get; set; }
         public Guid UserId{ get; set; }
-        public User User { get; set; }
+        public User? User { get; set; }
         public DateTimeOffset CreatedAt { get; set; }
     }
 }

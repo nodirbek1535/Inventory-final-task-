@@ -17,7 +17,7 @@ namespace Inventory_final_task_.Models.Inventories
         public string ImageUrl { get; set; }
         public bool IsPublic { get; set; }
         public Guid OwnerId { get; set; }
-        public User Owner { get; set; }
+        public User? Owner { get; set; }
         public int Version { get; set; }
         public DateTimeOffset CreatedAt { get; set; }
         public DateTimeOffset UpdatedAt { get; set; }
