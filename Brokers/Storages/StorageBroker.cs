@@ -1,4 +1,4 @@
-﻿//======================================
+//======================================
 //Nodirbek Nasrullayev Inventory Project
 //======================================
 
@@ -12,11 +12,8 @@ namespace Inventory_final_task_.Brokers.Storages
     {
         private readonly IConfiguration configuration;
 
-        public StorageBroker(IConfiguration configuration)
-        {
+        public StorageBroker(IConfiguration configuration) =>
             this.configuration = configuration;
-            this.Database.Migrate();
-        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
