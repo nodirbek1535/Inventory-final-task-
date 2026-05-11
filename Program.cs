@@ -5,6 +5,7 @@ using Inventory_final_task_.Services.Foundations.IdElements;
 using Inventory_final_task_.Services.Foundations.Inventories;
 using Inventory_final_task_.Services.Foundations.InventoryTags;
 using Inventory_final_task_.Services.Foundations.Items;
+using Inventory_final_task_.Services.Foundations.Likes;
 using Inventory_final_task_.Services.Foundations.Tags;
 using Inventory_final_task_.Services.Foundations.Users;
 using Microsoft.EntityFrameworkCore;
@@ -29,6 +30,7 @@ builder.Services.AddScoped<ITagService, TagService>();
 builder.Services.AddScoped<IInventoryTagService, InventoryTagService>();
 builder.Services.AddScoped<IItemService, ItemService>();
 builder.Services.AddScoped<ICommentService, CommentService>();
+builder.Services.AddScoped<ILikeService, LikeService>();
 
 // Swagger
 builder.Services.AddEndpointsApiExplorer();
