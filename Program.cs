@@ -1,4 +1,5 @@
 using Inventory_final_task_.Brokers.Storages;
+using Inventory_final_task_.Services.Foundations.Users;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,9 @@ builder.Services.AddDbContext<StorageBroker>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IStorageBroker, StorageBroker>();
+
+// Services
+builder.Services.AddScoped<IUserService, UserService>();
 
 // Swagger
 builder.Services.AddEndpointsApiExplorer();
