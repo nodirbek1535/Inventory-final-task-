@@ -2,6 +2,7 @@ using Inventory_final_task_.Brokers.Storages;
 using Inventory_final_task_.Services.Foundations.FieldConfigurations;
 using Inventory_final_task_.Services.Foundations.IdElements;
 using Inventory_final_task_.Services.Foundations.Inventories;
+using Inventory_final_task_.Services.Foundations.Tags;
 using Inventory_final_task_.Services.Foundations.Users;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,6 +22,7 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IInventoryService, InventoryService>();
 builder.Services.AddScoped<IFieldConfigurationService, FieldConfigurationService>();
 builder.Services.AddScoped<IIdElementService, IdElementService>();
+builder.Services.AddScoped<ITagService, TagService>();
 
 // Swagger
 builder.Services.AddEndpointsApiExplorer();
