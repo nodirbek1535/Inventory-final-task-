@@ -1,5 +1,6 @@
 using Inventory_final_task_.Brokers.Storages;
 using Inventory_final_task_.Services.Foundations.FieldConfigurations;
+using Inventory_final_task_.Services.Foundations.Comments;
 using Inventory_final_task_.Services.Foundations.IdElements;
 using Inventory_final_task_.Services.Foundations.Inventories;
 using Inventory_final_task_.Services.Foundations.InventoryTags;
@@ -27,6 +28,7 @@ builder.Services.AddScoped<IIdElementService, IdElementService>();
 builder.Services.AddScoped<ITagService, TagService>();
 builder.Services.AddScoped<IInventoryTagService, InventoryTagService>();
 builder.Services.AddScoped<IItemService, ItemService>();
+builder.Services.AddScoped<ICommentService, CommentService>();
 
 // Swagger
 builder.Services.AddEndpointsApiExplorer();
