@@ -1,5 +1,6 @@
 using Inventory_final_task_.Brokers.Storages;
 using Inventory_final_task_.Services.Foundations.FieldConfigurations;
+using Inventory_final_task_.Services.Foundations.AccessEntries;
 using Inventory_final_task_.Services.Foundations.Comments;
 using Inventory_final_task_.Services.Foundations.IdElements;
 using Inventory_final_task_.Services.Foundations.Inventories;
@@ -31,6 +32,7 @@ builder.Services.AddScoped<IInventoryTagService, InventoryTagService>();
 builder.Services.AddScoped<IItemService, ItemService>();
 builder.Services.AddScoped<ICommentService, CommentService>();
 builder.Services.AddScoped<ILikeService, LikeService>();
+builder.Services.AddScoped<IAccessEntryService, AccessEntryService>();
 
 // Swagger
 builder.Services.AddEndpointsApiExplorer();
