@@ -1,4 +1,4 @@
-﻿//======================================
+//======================================
 //Nodirbek Nasrullayev Inventory Project
 //======================================
 
@@ -25,6 +25,12 @@ namespace Inventory_final_task_.Brokers.Storages
 
         public async ValueTask<User> SelectUserByIdAsync(Guid userId) =>
             await this.Users.FindAsync(userId);
+
+        public async ValueTask<User> SelectUserByEmailAsync(string email) =>
+            await this.Users.FirstOrDefaultAsync(u => u.Email == email);
+
+        public async ValueTask<User> SelectUserByTokenAsync(string token) =>
+            await this.Users.FirstOrDefaultAsync(u => u.EmailConfirmationToken == token);
 
         public async ValueTask<User> UpdateUserAsync(User user)
         {
