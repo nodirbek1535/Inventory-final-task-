@@ -30,6 +30,12 @@ namespace Inventory_final_task_.Services.Foundations.Users
         public ValueTask<User> RetrieveUserByIdAsync(Guid userId) =>
             this.storageBroker.SelectUserByIdAsync(userId);
 
+        public ValueTask<User> RetrieveUserByEmailAsync(string email) =>
+            this.storageBroker.SelectUserByEmailAsync(email);
+
+        public ValueTask<User> RetrieveUserByTokenAsync(string token) =>
+            this.storageBroker.SelectUserByTokenAsync(token);
+
         public ValueTask<User> ModifyUserAsync(User user) =>
             this.storageBroker.UpdateUserAsync(user);
 

@@ -7,6 +7,8 @@ namespace Inventory_final_task_.Services.Foundations.Users
         ValueTask<User> AddUserAsync(User user);
         IQueryable<User> RetrieveAllUsers();
         ValueTask<User> RetrieveUserByIdAsync(Guid userId);
+        ValueTask<User> RetrieveUserByEmailAsync(string email);
+        ValueTask<User> RetrieveUserByTokenAsync(string token);
         ValueTask<User> ModifyUserAsync(User user);
         ValueTask<User> RemoveUserByIdAsync(Guid userId);
     }
